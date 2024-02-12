@@ -1,0 +1,24 @@
+---
+permalink: sm-mirroring/workflow-for-mirroring-a-volume-asynchronously.html 
+sidebar: sidebar 
+keywords: workflow, mirroring, volume asynchronously 
+summary: No System Manager, você pode espelhar um volume assincronamente seguindo estas etapas. 
+---
+= Fluxo de trabalho para espelhar um volume de forma assíncrona
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+No System Manager, você pode espelhar um volume assincronamente seguindo estas etapas.
+
+image::../media/sam1130-flw-async-set-up-mirroring.gif[espelhamento de configuração assíncrona flw sam1130]
+
+
+
+== Fluxo de trabalho para concluir um par espelhado para volumes primários em um sistema legado que não é gerenciado com o System Manager
+
+Se você criou um volume primário em um sistema legado que não é gerenciado com o Gerenciador de sistema, poderá criar o volume secundário com o Gerenciador de sistema do SANtricity.
+
+image::../media/workflow-for-mirroring-volume-asynchronously.png[fluxo de trabalho para espelhamento de volume de forma assíncrona]

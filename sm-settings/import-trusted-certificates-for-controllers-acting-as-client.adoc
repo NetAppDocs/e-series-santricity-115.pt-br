@@ -1,0 +1,44 @@
+---
+permalink: sm-settings/import-trusted-certificates-for-controllers-acting-as-client.html 
+sidebar: sidebar 
+keywords: import, trusted, certificates, controllers 
+summary: 'Depois de receber certificados digitais de uma autoridade de certificação (CA), você pode importar a cadeia de certificados (intermediária e raiz) para os controladores.' 
+---
+= Importar certificados confiáveis para controladores
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Depois de receber certificados digitais de uma autoridade de certificação (CA), você pode importar a cadeia de certificados (intermediária e raiz) para os controladores.
+
+.Antes de começar
+* Você deve estar conetado com um perfil de usuário que inclua permissões de administrador de segurança. Caso contrário, as funções do certificado não aparecem.
+* Você gerou uma solicitação de assinatura de certificado (arquivo .CSR) e a enviou para a CA.
+* A CA retornou arquivos de certificado confiáveis.
+* Os ficheiros de certificado estão instalados no sistema local.
+
+
+.Sobre esta tarefa
+Esta tarefa descreve como carregar os certificados confiáveis para os controladores do storage array.
+
+.Passos
+. Selecione menu:Definições[certificados].
+. Na guia *Trusted*, selecione *Import*.
++
+Abre-se uma caixa de diálogo para importar os ficheiros de certificado fidedignos.
+
+. Clique em *Procurar* para selecionar os arquivos de certificado para os controladores.
++
+Os nomes dos arquivos são exibidos na caixa de diálogo.
+
+. Clique em *Importar*.
+
+
+.Resultados
+Os arquivos são carregados e validados.
+
+.Depois de terminar
+Importar o certificado de gestão.

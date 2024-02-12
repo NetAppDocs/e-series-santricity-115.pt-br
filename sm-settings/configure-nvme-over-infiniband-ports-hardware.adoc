@@ -1,0 +1,47 @@
+---
+permalink: sm-settings/configure-nvme-over-infiniband-ports-hardware.html 
+sidebar: sidebar 
+keywords: configure, nvme, infiniband, ports 
+summary: Se o controlador incluir uma conexão NVMe over InfiniBand, você poderá configurar as configurações da porta NVMe na página hardware ou na página sistema. 
+---
+= Configurar portas NVMe em InfiniBand
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se o controlador incluir uma conexão NVMe over InfiniBand, você poderá configurar as configurações da porta NVMe na página hardware ou na página sistema.
+
+.Antes de começar
+* Seu controlador deve incluir uma porta de host NVMe over InfiniBand. Caso contrário, as configurações de NVMe em InfiniBand não estão disponíveis no System Manager.
+* Você deve saber o endereço IP da conexão do host.
+
+
+.Sobre esta tarefa
+Você pode acessar a configuração NVMe over InfiniBand na página *hardware* ou no menu:Configurações[sistema]. Esta tarefa descreve como configurar as portas a partir da página *hardware*.
+
+[NOTE]
+====
+As configurações e funções do NVMe over InfiniBand aparecerão somente se a controladora do storage array incluir uma porta NVMe over InfiniBand.
+
+====
+.Passos
+. Selecione *hardware*.
+. Se o gráfico mostrar as unidades, clique em *Mostrar parte traseira da prateleira*.
++
+O gráfico muda para mostrar os controladores em vez das unidades.
+
+. Clique no controlador com a porta NVMe over InfiniBand que você deseja configurar.
++
+É apresentado o menu de contexto do controlador.
+
+. Selecione *Configurar portas NVMe over InfiniBand*.
++
+A caixa de diálogo *Configurar portas NVMe em InfiniBand* abre-se.
+
+. Na lista suspensa, selecione a porta HIC que deseja configurar e insira o endereço IP do host.
+. Clique em *Configurar*.
+. Conclua a configuração e, em seguida, redefina a porta NVMe over InfiniBand clicando em *Yes*.
+

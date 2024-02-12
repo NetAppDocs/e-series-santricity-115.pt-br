@@ -1,0 +1,18 @@
+---
+permalink: sm-settings/how-do-i-know-what-certificates-need-to-be-uploaded-to-system-manager.html 
+sidebar: sidebar 
+keywords: how, what, know, certificates, need, uploaded, system manager 
+summary: Para o gerenciamento de chaves externas, você importa dois tipos de certificados para autenticação entre o storage array e o servidor de gerenciamento de chaves para que as duas entidades possam confiar umas nas outras. 
+---
+= Como sei quais certificados precisam ser carregados no System Manager?
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para o gerenciamento de chaves externas, você importa dois tipos de certificados para autenticação entre o storage array e o servidor de gerenciamento de chaves para que as duas entidades possam confiar umas nas outras.
+
+Um certificado de cliente valida os controladores da matriz de armazenamento, para que o servidor de gestão de chaves possa confiar nos seus endereços IP. Para obter um certificado de cliente, você deve concluir um CSR para o storage array e, em seguida, enviá-lo para o servidor de gerenciamento de chaves. A partir do servidor, gere um certificado de cliente e, em seguida, utilize o System Manager para importá-lo.
+
+Um certificado do servidor de gerenciamento de chaves valida o servidor de gerenciamento de chaves, de modo que o storage array possa confiar em seu endereço IP. Para obter um certificado de servidor de gerenciamento de chaves, você deve gerá-lo a partir do servidor de gerenciamento de chaves.

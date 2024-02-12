@@ -1,0 +1,69 @@
+---
+permalink: sm-settings/step-1-complete-a-csr.html 
+sidebar: sidebar 
+keywords: complete, ca certificate, signing, request, csr, controllers 
+summary: 'Para receber um certificado de autoridade de certificação (CA) para os controladores do storage array, primeiro é necessário gerar um arquivo de solicitação de assinatura de certificado (CSR) para cada controlador no storage array.' 
+---
+= Conclua uma solicitação de assinatura de certificado da CA (CSR) para os controladores
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para receber um certificado de autoridade de certificação (CA) para os controladores do storage array, primeiro é necessário gerar um arquivo de solicitação de assinatura de certificado (CSR) para cada controlador no storage array.
+
+.Antes de começar
+* Você deve estar conetado com um perfil de usuário que inclua permissões de administrador de segurança. Caso contrário, as funções do certificado não aparecem.
+
+
+.Sobre esta tarefa
+Esta tarefa descreve como gerar os arquivos .CSR (solicitações de assinatura de certificado) que você envia a uma CA para receber certificados de gerenciamento assinados para os controladores. Você deve fornecer informações sobre sua organização, além do endereço IP ou nome DNS do(s) controlador(es). Durante esta tarefa, um arquivo .CSR é gerado se houver apenas um controlador na matriz de armazenamento e dois arquivos .CSR se houver dois controladores.
+
+.Passos
+. Selecione menu:Definições[certificados].
+. Na guia *Array Management*, selecione *Complete CSR*.
++
+[NOTE]
+====
+Se você vir uma caixa de diálogo solicitando que você aceite um certificado autoassinado para o segundo controlador, clique em *aceitar certificado autoassinado* para continuar.
+
+====
+. Insira as seguintes informações e clique em *Next*:
++
+** *Organização* -- o nome completo e legal de sua empresa ou organização. Inclua sufixos, como Inc. Ou Corp.
+** * Unidade organizacional (opcional) * -- a divisão da sua organização que está a lidar com o certificado.
+** *Cidade/localidade* -- a cidade onde seu storage array ou negócio está localizado.
+** *Estado/região (opcional)* -- o estado ou a região onde o storage ou a empresa está localizado.
+** *Código ISO do país* -- o código ISO de dois dígitos do seu país (Organização Internacional para Padronização), como os EUA.
+
+
++
+[CAUTION]
+====
+Alguns campos podem ser pré-preenchidos com as informações apropriadas, como o endereço IP do controlador. Não altere valores pré-preenchidos a menos que você tenha certeza de que eles estão incorretos. Por exemplo, se você ainda não concluiu um CSR, o endereço IP do controlador é definido como ""localhost". Neste caso, você deve alterar ""localhost"" para o nome DNS ou endereço IP do controlador.
+
+====
+. Verifique ou insira as seguintes informações sobre o controlador A no storage array:
++
+** *Controller Um nome comum* -- o endereço IP ou o nome DNS do controlador A é exibido por padrão. Certifique-se de que este endereço está correto; ele deve corresponder exatamente ao que você digita para acessar o System Manager no navegador.
+** *Controller Um endereço IP alternativo* -- se o nome comum for um endereço IP, você pode opcionalmente inserir quaisquer endereços IP adicionais ou aliases para o controlador A. para várias entradas, use um formato delimitado por vírgulas.
+** *Controller (controlador) De nomes DNS alternativos* -- se o nome comum for um nome DNS, insira quaisquer nomes DNS adicionais para o controlador A. para várias entradas, use um formato delimitado por vírgulas. Se não houver nomes DNS alternativos, mas você inseriu um nome DNS no primeiro campo, copie esse nome aqui. Se a matriz de armazenamento tiver apenas um controlador, o botão *Finish* estará disponível. Se a matriz de armazenamento tiver dois controladores, o botão *Next* estará disponível.
+
+
++
+[NOTE]
+====
+Não clique no link *Ignorar esta etapa* quando você estiver criando inicialmente uma solicitação CSR. Este link é fornecido em situações de recuperação de erros. Em casos raros, uma solicitação CSR pode falhar em um controlador, mas não no outro. Este link permite que você ignore a etapa para criar uma solicitação CSR no controlador A, se já estiver definida, e continue para a próxima etapa para recriar uma solicitação CSR no controlador B.
+
+====
+. Se houver apenas um controlador, clique em *Finish*. Se houver dois controladores, clique em *Next* para inserir informações para o controlador B (o mesmo que acima) e, em seguida, clique em *Finish*.
++
+Para um único controlador, um ficheiro .CSR é transferido para o seu sistema local. Para controladores duplos, são transferidos dois ficheiros .CSR. A localização da pasta do download depende do seu navegador.
+
+. Envie o(s) ficheiro(s) .CSR para a sua CA.
+
+
+.Depois de terminar
+Quando receber os certificados digitais, importe os ficheiros de certificado adequados que a CA lhe enviou.

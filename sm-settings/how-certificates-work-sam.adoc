@@ -1,0 +1,28 @@
+---
+permalink: sm-settings/how-certificates-work-sam.html 
+sidebar: sidebar 
+keywords: ca certificates, csr files 
+summary: 'Uma autoridade de certificação (CA) é uma entidade confiável que emite documentos eletrônicos, chamados certificados digitais, para segurança na Internet. Esses certificados identificam proprietários de sites, o que permite conexões seguras entre clientes e servidores.' 
+---
+= Como os certificados CA funcionam
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Uma autoridade de certificação (CA) é uma entidade confiável que emite documentos eletrônicos, chamados certificados digitais, para segurança na Internet. Esses certificados identificam proprietários de sites, o que permite conexões seguras entre clientes e servidores.
+
+Quando você abre um navegador e tenta se conetar ao System Manager por meio da porta de gerenciamento do controlador, o navegador tenta verificar se o controlador do storage array é uma fonte confiável. Se o navegador não conseguir localizar um certificado digital para o controlador, ele alerta que o certificado não está assinado por uma autoridade reconhecida e pergunta se você deseja continuar. Se você não quiser mais ver esse alerta, você deve obter um certificado digital assinado de uma CA.
+
+Se você estiver usando um servidor de gerenciamento de chaves externo com o recurso Segurança da unidade, também poderá criar certificados para autenticação entre esse servidor e os controladores ou aceitar os certificados autoassinados do storage.
+
+As etapas a seguir são necessárias para usar um certificado digital de uma autoridade confiável:
+
+. Aceda ao menu:Definições[certificados]. Seu login de usuário deve incluir permissões de administrador de segurança; caso contrário, *certificados* não aparece na página.
+. Crie uma solicitação de assinatura de certificado (CSR) para cada controlador ou para um servidor de gerenciamento de chaves.
+. Envie o(s) arquivo(s) .CSR para uma CA e aguarde que eles enviem os certificados.
+. Importe o certificado confiável (intermediário e raiz) da CA. Esses certificados estabelecem um ponto de confiança para uma hierarquia de CA.
+. Importe os certificados de gerenciamento assinados para cada controlador ou servidor de gerenciamento de chaves.
+

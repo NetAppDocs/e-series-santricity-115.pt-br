@@ -1,0 +1,42 @@
+---
+permalink: sm-settings/delete-trusted-certificates.html 
+sidebar: sidebar 
+keywords: delete, trusted, certificates 
+summary: Pode eliminar qualquer um dos certificados importados pelo utilizador. 
+---
+= Excluir certificados confiáveis
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Pode eliminar qualquer um dos certificados importados pelo utilizador.
+
+.Antes de começar
+* Você deve estar conetado com um perfil de usuário que inclua permissões de administrador de segurança. Caso contrário, as funções do certificado não aparecem.
+* Se você estiver atualizando um certificado confiável com uma nova versão, o certificado atualizado deve ser importado antes de excluir o certificado antigo.
+
+
+[CAUTION]
+====
+Poderá perder o acesso ao sistema se eliminar um certificado utilizado para autenticar os certificados de gestão da matriz de armazenamento ou o servidor LDAP antes de importar um certificado de substituição.
+
+====
+.Sobre esta tarefa
+Esta tarefa descreve como eliminar certificados importados pelo utilizador. Os certificados predefinidos não podem ser eliminados.
+
+.Passos
+. Selecione menu:Definições[certificados].
+. Selecione a guia *Trusted*.
++
+A tabela mostra os certificados confiáveis do storage array.
+
+. Na tabela, selecione o certificado que deseja remover.
+. Clique em menu:tarefas incomuns[Delete].
++
+Uma caixa de diálogo confirmar Excluir certificado confiável é aberta.
+
+. Digite `delete` o campo e clique em *Excluir*.
+

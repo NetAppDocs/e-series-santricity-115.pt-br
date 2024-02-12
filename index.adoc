@@ -1,0 +1,16 @@
+---
+layout: landing-page 
+permalink: index.html 
+sidebar: sidebar 
+lead: SANtricity software lets you achieve maximum performance and utilization of your E-Series storage arrays for heavy-workload applications. 
+summary: Gerente do sistema da SANtricity 
+---
+= Documentação do software SANtricity 11,5
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+

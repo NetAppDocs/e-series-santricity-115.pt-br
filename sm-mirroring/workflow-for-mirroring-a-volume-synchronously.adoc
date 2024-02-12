@@ -1,0 +1,16 @@
+---
+permalink: sm-mirroring/workflow-for-mirroring-a-volume-synchronously.html 
+sidebar: sidebar 
+keywords: workflow, mirror, volume, synchronously 
+summary: No Gerenciador de sistemas do SANtricity, você pode espelhar um volume de forma síncrona seguindo estas etapas. 
+---
+= Fluxo de trabalho para espelhar um volume de forma síncrona
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+No Gerenciador de sistemas do SANtricity, você pode espelhar um volume de forma síncrona seguindo estas etapas.
+
+image::../media/sam1130-flw-sync-create.gif[sam1130 flw sync create]

@@ -1,0 +1,44 @@
+---
+permalink: sm-settings/step-3-import-signed-certificates-for-the-controllers.html 
+sidebar: sidebar 
+keywords: import, management, certificate, controllers 
+summary: 'Depois de importar a cadeia de certificados confiável, você importa um arquivo de certificado de gerenciamento (assinado) para cada controlador no storage array.' 
+---
+= Importe um certificado de gerenciamento para controladores
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Depois de importar a cadeia de certificados confiável, você importa um arquivo de certificado de gerenciamento (assinado) para cada controlador no storage array.
+
+.Antes de começar
+* Você deve estar conetado com um perfil de usuário que inclua permissões de administrador de segurança. Caso contrário, as funções do certificado não aparecem.
+* Os certificados confiáveis foram importados.
+* A CA retornou um arquivo de certificado de gerenciamento para cada controlador.
+* O(s) arquivo(s) de certificado de gerenciamento estão disponíveis no sistema local.
+
+
+.Sobre esta tarefa
+Esta tarefa descreve como carregar os ficheiros de certificado de gestão para autenticação do controlador.
+
+.Passos
+. Selecione menu:Definições[certificados].
+. Na guia *Array Management*, selecione *Import*.
++
+Abre-se uma caixa de diálogo para importar o(s) ficheiro(s) de certificado.
+
+. Clique em *Browse* para selecionar o arquivo para o controlador A. se houver dois controladores, clique no segundo botão *Browse* para selecionar o arquivo para o controlador B.
++
+Os nomes dos arquivos são exibidos na caixa de diálogo.
+
+. Clique em *Importar*.
++
+Os arquivos são carregados e validados.
+
+
+
+.Resultados
+A sessão é terminada automaticamente. Você deve fazer login novamente para que o(s) certificado(s) entre em vigor. Quando você faz login novamente, o novo certificado assinado pela CA é usado para sua sessão.

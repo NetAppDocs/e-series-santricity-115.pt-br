@@ -1,0 +1,45 @@
+---
+permalink: sm-settings/step-1-complete-and-submit-csr-for-authentication-with-a-key-server.html 
+sidebar: sidebar 
+keywords: complete, ca certificate, signing, request, csr, key server 
+summary: 'Para receber um certificado de autoridade de certificação (CA) para um servidor de gerenciamento de chaves, primeiro é necessário gerar um arquivo de solicitação de assinatura de certificado (CSR).' 
+---
+= Solicitação de assinatura de certificado de CA completa (CSR) para um servidor de chaves
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para receber um certificado de autoridade de certificação (CA) para um servidor de gerenciamento de chaves, primeiro é necessário gerar um arquivo de solicitação de assinatura de certificado (CSR).
+
+.Antes de começar
+* Você deve estar conetado com um perfil de usuário que inclua permissões de administrador de segurança. Caso contrário, as funções do certificado não aparecem.
+
+
+.Sobre esta tarefa
+Esta tarefa descreve como gerar os arquivos .CSR (solicitações de assinatura de certificado) que você envia a uma CA para receber certificados assinados para um servidor de gerenciamento de chaves. Durante essa tarefa, você deve fornecer informações sobre sua organização.
+
+.Passos
+. Selecione menu:Definições[certificados].
+. Na guia *Key Management*, selecione *Complete CSR*.
+. Introduza as seguintes informações:
++
+** * Nome comum* -- um nome que identifica este CSR, como o nome da matriz de armazenamento, que será exibido nos arquivos de certificado.
+** *Organização* -- o nome completo e legal de sua empresa ou organização. Inclua sufixos, como Inc. Ou Corp.
+** * Unidade organizacional (opcional) * -- a divisão da sua organização que está a lidar com o certificado.
+** *Cidade/localidade* -- a cidade ou localidade onde sua organização está localizada.
+** *Estado/região (opcional)* -- o estado ou a região onde sua organização está localizada.
+** *Código ISO do país* -- o código ISO de dois dígitos (Organização Internacional para Padronização), como EUA, onde sua organização está localizada.
+
+
+. Clique em *Download*.
++
+Um ficheiro .CSR é guardado no seu sistema local.
+
+. Envie o(s) ficheiro(s) .CSR para a sua CA.
+
+
+.Depois de terminar
+Quando você obtém os certificados de cliente e servidor do servidor de gerenciamento de chaves, importe-os para autenticação com os controladores do storage array.

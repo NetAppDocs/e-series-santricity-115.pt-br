@@ -1,0 +1,47 @@
+---
+permalink: sm-hardware/configure-iser-over-infiniband-ports-hardware.html 
+sidebar: sidebar 
+keywords: configure, iser, infiniband, ports 
+summary: Se o controlador incluir uma porta iSER over InfiniBand, você poderá configurar a conexão de rede ao host. As configurações estão disponíveis na página hardware ou na página sistema. 
+---
+= Configurar o iSER em portas InfiniBand
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se o controlador incluir uma porta iSER over InfiniBand, você poderá configurar a conexão de rede ao host. As configurações estão disponíveis na página hardware ou na página sistema.
+
+.Antes de começar
+* Sua controladora deve incluir uma porta iSER over InfiniBand; caso contrário, as configurações iSER over InfiniBand não estão disponíveis no System Manager.
+* Você deve saber o endereço IP da conexão do host.
+
+
+.Sobre esta tarefa
+Você pode acessar a configuração iSER over InfiniBand na página *hardware* ou no menu:Configurações[sistema]. Esta tarefa descreve como configurar as portas a partir da página *hardware*.
+
+[NOTE]
+====
+As configurações e funções do iSER over InfiniBand aparecerão somente se o controlador do storage array incluir uma porta iSER over InfiniBand.
+
+====
+.Passos
+. Selecione *hardware*.
+. Se o gráfico mostrar as unidades, clique em *Mostrar parte traseira da prateleira*.
++
+O gráfico muda para mostrar os controladores em vez das unidades.
+
+. Clique no controlador com a porta iSER over InfiniBand que você deseja configurar.
++
+É apresentado o menu de contexto do controlador.
+
+. Selecione *Configure iSER over InfiniBand Ports*.
++
+A caixa de diálogo *Configure iSER over InfiniBand Ports (Configurar portas iSER em InfiniBand) é aberta.
+
+. Na lista suspensa, selecione a porta HIC que deseja configurar e insira o endereço IP do host.
+. Clique em *Configurar*.
+. Conclua a configuração e, em seguida, redefina a porta iSER em InfiniBand clicando em *Yes*.
+

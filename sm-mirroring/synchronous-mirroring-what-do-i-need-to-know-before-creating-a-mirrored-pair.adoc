@@ -1,0 +1,22 @@
+---
+permalink: sm-mirroring/synchronous-mirroring-what-do-i-need-to-know-before-creating-a-mirrored-pair.html 
+sidebar: sidebar 
+keywords: synchronous, mirroring, create, mirrored path 
+summary: Antes de criar um par espelhado, certifique-se de que seu ambiente atenda às diretrizes a seguir. 
+---
+= Espelhamento síncrono - o que eu preciso saber antes de criar um par espelhado?
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Antes de criar um par espelhado, certifique-se de que seu ambiente atenda às diretrizes a seguir.
+
+* Você precisa ter capacidade livre suficiente no storage array remoto para criar um volume secundário igual ou maior que o volume principal que deseja espelhar.
+* Você precisa ter dois storage arrays.
+* Cada storage array deve ter duas controladoras.
+* Você deve saber a senha para os storages de armazenamento local e remoto.
+* Seus storage arrays locais e remotos precisam ser conectados por uma malha Fibre Channel.
+* Você deve ter descoberto os dois arrays de armazenamento entre os quais deseja espelhar dados. Em seguida, no Unified Manager, você seleciona o storage array do volume principal e clica em Iniciar para abrir o Gerenciador de sistema do SANtricity baseado no navegador.
+

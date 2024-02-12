@@ -1,0 +1,24 @@
+---
+permalink: sm-mirroring/asynchronous-mirroring-what-do-i-need-to-know-before-creating-a-mirrored-pair.html 
+sidebar: sidebar 
+keywords: asynchronous, mirror, create, mirrored pair 
+summary: Seu storage array deve conter pelo menos um grupo de consistência de espelho. 
+---
+= Espelhamento assíncrono - o que preciso saber antes de criar um par espelhado?
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Seu storage array deve conter pelo menos um grupo de consistência de espelho.
+
+Além disso, certifique-se do seguinte:
+
+* Você precisa ter capacidade livre suficiente no storage array remoto para criar um volume secundário igual ou maior que o volume principal que deseja espelhar.
+* Você precisa ter dois storage arrays.
+* Cada storage array deve ter duas controladoras.
+* Você deve saber a senha para os storages de armazenamento local e remoto.
+* Seus storage arrays locais e remotos precisam ser conectados por meio de uma malha Fibre Channel ou de uma interface iSCSI.
+* Você precisa ter o SANtricity Unified Manager baseado no navegador instalado e ter descoberto os dois arrays de storage entre os quais deseja espelhar dados. Em seguida, no Unified Manager, você seleciona o storage array do volume principal e clica em Iniciar para abrir o Gerenciador de sistema do SANtricity baseado no navegador.
+

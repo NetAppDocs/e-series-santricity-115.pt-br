@@ -1,0 +1,52 @@
+---
+permalink: sm-settings/step-2-import-certificates-for-key-management-server.html 
+sidebar: sidebar 
+keywords: import, key, management, server, certificates 
+summary: 'Para o gerenciamento de chaves externas, você importa certificados para autenticação entre o storage array e o servidor de gerenciamento de chaves para que as duas entidades possam confiar umas nas outras. Existem dois tipos de certificados: O certificado do cliente valida os controladores, enquanto o certificado do servidor de gestão de chaves valida o servidor.' 
+---
+= Importar certificados de servidor de gerenciamento de chaves
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para o gerenciamento de chaves externas, você importa certificados para autenticação entre o storage array e o servidor de gerenciamento de chaves para que as duas entidades possam confiar umas nas outras. Existem dois tipos de certificados: O certificado do cliente valida os controladores, enquanto o certificado do servidor de gestão de chaves valida o servidor.
+
+.Antes de começar
+* Você deve estar conetado com um perfil de usuário que inclua permissões de administrador de segurança. Caso contrário, as funções do certificado não aparecem.
+* Um certificado de cliente está disponível para a matriz de armazenamento.
++
+[NOTE]
+====
+Um certificado de cliente valida os controladores da matriz de armazenamento, para que o servidor de gestão de chaves possa confiar nos seus endereços IP. Para obter um certificado de cliente, você deve concluir um CSR para o storage array e, em seguida, enviá-lo para o servidor de gerenciamento de chaves. A partir do servidor, gere um certificado de cliente.
+
+====
+* O certificado do servidor de gerenciamento de chaves está disponível.
++
+[NOTE]
+====
+Um certificado do servidor de gerenciamento de chaves valida o servidor, para que o storage array possa confiar em seu endereço IP. Para obter um certificado de servidor de gerenciamento de chaves, você deve gerá-lo a partir do servidor de gerenciamento de chaves.
+
+====
+
+
+.Sobre esta tarefa
+Esta tarefa descreve como fazer upload de arquivos de certificado para autenticação entre os controladores de storage array e o servidor de gerenciamento de chaves.
+
+.Passos
+. Selecione menu:Definições[certificados].
+. Na guia *Key Management*, selecione *Import*.
++
+Abre-se uma caixa de diálogo para importar os ficheiros de certificado.
+
+. Clique nos botões *Browse* para selecionar os arquivos.
++
+Os nomes dos arquivos são exibidos na caixa de diálogo.
+
+. Clique em *Importar*.
++
+Os arquivos são carregados e validados.
+
+

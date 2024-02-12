@@ -1,0 +1,16 @@
+---
+permalink: sm-mirroring/why-do-i-see-more-than-one-reserved-capacity-candidate.html 
+sidebar: sidebar 
+keywords: reserved, capacity, candidate 
+summary: Você vê mais de um candidato a capacidade reservada quando o System Manager deteta mais de um volume em um pool ou grupo de volumes que atende ao valor percentual de capacidade selecionado para o objeto de storage. 
+---
+= Por que vejo mais de um candidato à capacidade reservada?
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você vê mais de um candidato a capacidade reservada quando o System Manager deteta mais de um volume em um pool ou grupo de volumes que atende ao valor percentual de capacidade selecionado para o objeto de storage.
+
+Você pode optar por atualizar a lista de candidatos recomendados alterando a porcentagem de espaço físico da unidade que deseja reservar no volume base para operações de serviço de cópia. O System Manager exibe os melhores candidatos de capacidade reservada com base na sua seleção.

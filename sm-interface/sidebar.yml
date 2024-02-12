@@ -1,0 +1,81 @@
+---
+section: sm-interface
+title: Interface principal
+entries:
+- title: Visão geral da interface
+  entries:
+  - title: Conceitos
+    entries:
+    - title: Página inicial
+      url: "/sm-interface/home-page.html"
+    - title: Novidades no SANtricity System Manager
+      url: "/sm-interface/whats-new-in-sam.html"
+- title: Assistente de instalação
+  entries:
+  - title: Conceitos
+    entries:
+    - title: Descrição geral do assistente de configuração
+      url: "/sm-interface/setup-wizard-overview.html"
+    - title: Terminologia do assistente de configuração
+      url: "/sm-interface/setup-wizard-terminology.html"
+  - title: FAQs
+    entries:
+    - title: E se eu não vir todos os meus componentes de hardware?
+      url: "/sm-interface/what-if-i-dont-see-all-of-my-hardware-components.html"
+    - title: E se eu não ver todos os meus anfitriões?
+      url: "/sm-interface/what-if-i-dont-see-all-of-my-hosts.html"
+    - title: Como sei qual tipo de sistema operacional do host está correto?
+      url: "/sm-interface/how-do-i-know-which-host-operating-system-type-is-correct.html"
+    - title: Como a identificação de aplicativos me ajuda a gerenciar meu storage
+        array?
+      url: "/sm-interface/how-does-identifying-applications-help-me-manage-my-storage-array.html"
+    - title: O que é uma carga de trabalho?
+      url: "/sm-interface/what-is-a-workload.html"
+    - title: Como configuro alertas SNMP ou syslog?
+      url: "/sm-interface/how-do-i-configure-snmp-or-syslog-alerts.html"
+    - title: Como faço para configurar o método de entrega para o AutoSupport?
+      url: "/sm-interface/how-do-i-configure-the-delivery-method-for-autosupport-new.html"
+    - title: Que tipo de dados são recolhidos através da funcionalidade AutoSupport?
+      url: "/sm-interface/what-type-of-data-is-collected-through-autosupport.html"
+    - title: Como sei se devo aceitar a configuração recomendada do pool?
+      url: "/sm-interface/how-do-i-know-if-i-should-accept-the-recommended-pool-configuration.html"
+    - title: O System Manager não detetou nenhum host. O que faço?
+      url: "/sm-interface/system-manager-has-not-detected-any-hosts-what-do-i-do.html"
+    - title: O que é uma unidade de reserva quente?
+      url: "/sm-interface/what-is-a-hot-spare-drive.html"
+    - title: O que é um grupo de volume?
+      url: "/sm-interface/what-is-a-volume-group.html"
+    - title: Quais são as diferenças entre pools e grupos de volumes?
+      url: "/sm-interface/what-are-the-differences-between-pools-and-volume-groups.html"
+- title: Administração do storage array
+  entries:
+  - title: Conceitos
+    entries:
+    - title: Visão geral do storage array
+      url: "/sm-interface/storage-array-overview.html"
+    - title: Proteção por senha do administrador
+      url: "/sm-interface/administrator-password-protection.html"
+    - title: Notificação de problema
+      url: "/sm-interface/problem-notification.html"
+    - title: Eventos críticos
+      url: "/sm-interface/critical-events.html"
+    - title: Operações em curso
+      url: "/sm-interface/operations-in-progress.html"
+  - title: Como tos
+    entries:
+    - title: Definir unidades padrão para valores de capacidade
+      url: "/sm-interface/set-default-units-for-capacity-values.html"
+    - title: Definir o período de tempo predefinido para gráficos de desempenho
+      url: "/sm-interface/set-default-time-frame-for-performance-graphs.html"
+    - title: Recuperar de problemas usando Recovery Guru
+      url: "/sm-interface/recover-from-problems-using-recovery-guru.html"
+    - title: Visualizar e agir sobre as operações em andamento
+      url: "/sm-interface/view-and-act-on-operations-in-progress.html"
+  - title: FAQs
+    entries:
+    - title: Onde posso encontrar mais informações sobre as preferências de visualização?
+      url: "/sm-interface/where-can-i-find-more-information-about-display-preferences.html"
+    - title: Quais são os navegadores suportados?
+      url: "/sm-interface/what-are-the-supported-browsers.html"
+    - title: Quais são os atalhos de teclado?
+      url: "/sm-interface/what-are-the-keyboard-shortcuts.html"

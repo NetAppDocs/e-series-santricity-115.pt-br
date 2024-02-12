@@ -1,0 +1,88 @@
+---
+permalink: sm-storage/change-configuration-settings-for-a-volume-group.html 
+sidebar: sidebar 
+keywords: change, raid level, volume group 
+summary: Você pode alterar o nível RAID de um grupo de volumes para acomodar as necessidades de desempenho dos aplicativos que estão acessando o grupo de volumes. Essa operação altera o nível RAID de um grupo de volumes sem afetar a e/S dos dados 
+---
+= Alterar o nível RAID para um grupo de volumes
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode alterar o nível RAID de um grupo de volumes para acomodar as necessidades de desempenho dos aplicativos que estão acessando o grupo de volumes. Essa operação altera o nível RAID de um grupo de volumes sem afetar a e/S dos dados
+
+.Antes de começar
+* O grupo de volume tem de estar no estado ideal.
+* Você precisa ter capacidade suficiente no grupo de volumes para converter para o novo nível RAID.
+* Não é possível alterar o nível RAID de um pool. O System Manager configura automaticamente pools como RAID 6.
+
+
+.Sobre esta tarefa
+Não é possível cancelar esta operação depois de iniciada. Seus dados permanecem disponíveis durante essa operação.
+
+Mais sobre os níveis de RAID
+
+[cols="2*"]
+|===
+| Nível RAID | Descrição 
+
+
+ a| 
+RAID 0 striping
+ a| 
+Oferece alto desempenho, mas não fornece redundância de dados. Se uma única unidade falhar no grupo de volumes, todos os volumes associados falharão e todos os dados serão perdidos.
+
+Um grupo RAID de distribuição combina duas ou mais unidades em uma unidade lógica grande.
+
+
+
+ a| 
+Espelhamento RAID 1
+ a| 
+Oferece alto desempenho e a melhor disponibilidade de dados, e é adequado para armazenar dados confidenciais em um nível corporativo ou pessoal.
+
+Protege seus dados espelhando automaticamente o conteúdo de uma unidade para a segunda unidade no par espelhado. Ele fornece proteção em caso de falha única de unidade.
+
+
+
+ a| 
+RAID 10 striping/espelhamento
+ a| 
+Fornece uma combinação de RAID 0 (striping) e RAID 1 (espelhamento) e é obtida quando quatro ou mais unidades são selecionadas.
+
+O RAID 10 é adequado para aplicações de transações de alto volume, como um banco de dados, que exigem alto desempenho e tolerância a falhas.
+
+
+
+ a| 
+RAID 5
+ a| 
+Ideal para ambientes de vários usuários (como armazenamento de banco de dados ou sistema de arquivos) em que o tamanho típico de e/S é pequeno e há uma alta proporção de atividade de leitura.
+
+
+
+ a| 
+RAID 6
+ a| 
+Ideal para ambientes que exigem proteção de redundância além do RAID 5, mas que não exigem alto desempenho de gravação.
+
+|===
+O RAID 3 só pode ser atribuído a grupos de volume usando a interface de linha de comando (CLI).
+
+.Passos
+. Selecione *menu:armazenamento[pools & grupos de volume]*.
+. Selecione o grupo de volume que deseja editar e clique em *Exibir/Editar configurações*.
++
+A caixa de diálogo Configurações do Grupo de volume é exibida.
+
+. Selecione o nível RAID na lista suspensa e clique em *Salvar*.
++
+Uma caixa de diálogo de confirmação será exibida se a capacidade for reduzida, a redundância de volume for perdida ou a proteção contra perda de gaveta/gaveta for perdida como resultado da alteração do nível RAID. Selecione *Sim* para continuar; caso contrário, clique em *não*.
+
+
+
+.Resultados
+Quando você altera o nível RAID para um grupo de volumes, o System Manager altera os níveis RAID de cada volume que compreende o grupo de volumes. O desempenho pode ser ligeiramente afetado durante a operação.

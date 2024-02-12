@@ -1,0 +1,21 @@
+---
+permalink: sm-mirroring/synchronous-mirroring-why-dont-i-see-all-my-volumes.html 
+sidebar: sidebar 
+keywords: synchronous, mirroring, all my volumes 
+summary: Quando você está selecionando um volume primário para um par espelhado, o System Manager exibe uma lista de todos os volumes elegíveis para esse par espelhado. Quaisquer volumes que não sejam elegíveis para serem usados não são exibidos nessa lista. 
+---
+= Espelhamento síncrono - por que não vejo todos os meus volumes?
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Quando você está selecionando um volume primário para um par espelhado, o System Manager exibe uma lista de todos os volumes elegíveis para esse par espelhado. Quaisquer volumes que não sejam elegíveis para serem usados não são exibidos nessa lista.
+
+Os volumes podem não ser elegíveis por qualquer um dos seguintes motivos:
+
+* O volume é um volume não padrão, como um volume instantâneo ou um volume fino.
+* O volume não é ideal.
+* O volume já está participando de uma relação de espelhamento.
+

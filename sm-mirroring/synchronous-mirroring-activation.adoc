@@ -1,0 +1,31 @@
+---
+permalink: sm-mirroring/synchronous-mirroring-activation.html 
+sidebar: sidebar 
+keywords: synchronous, mirror, activation 
+summary: O recurso espelhamento síncrono é ativado automaticamente quando o primeiro par espelhado síncrono é criado em um storage array. 
+---
+= Ativação do espelhamento síncrono
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O recurso espelhamento síncrono é ativado automaticamente quando o primeiro par espelhado síncrono é criado em um storage array.
+
+Quando o recurso de espelhamento síncrono é ativado, o System Manager executa as seguintes ações:
+
+* Reserva a porta com o número mais alto do HIC do controlador para transmissão de dados espelhados.
++
+As solicitações de e/S recebidas nesta porta são aceitas somente pelo proprietário do controlador preferido remoto do volume secundário no par espelhado. (São permitidas reservas no volume primário.)
+
+* Cria dois volumes de capacidade reservados, um para cada controlador, que são usados para Registrar informações de gravação para recuperar de reinicializações do controlador e outras interrupções temporárias.
++
+A capacidade de cada volume é de 128 MIB. No entanto, se os volumes forem colocados em um pool, 4 GiB serão reservados para cada volume.
+
+
+
+Com o recurso espelhamento síncrono, há limites para o número de volumes compatíveis em um determinado storage array. Antes de ativar o espelhamento síncrono, certifique-se de que o número de volumes configurados no storage array seja menor que o limite suportado. Quando o espelhamento síncrono está ativo, os dois volumes de capacidade reservada criados contam com relação ao limite de volume.
+
+Se necessitar de desativar o espelhamento síncrono posteriormente, aceda ao menu:armazenamento[Espelhamento síncrono > tarefas incomuns > Desativar].

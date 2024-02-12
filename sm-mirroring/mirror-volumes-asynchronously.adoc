@@ -1,0 +1,14 @@
+---
+permalink: sm-mirroring/mirror-volumes-asynchronously.html 
+sidebar: sidebar 
+keywords: mirror, volumes, asynchronously 
+summary: 'Com o recurso de espelhamento assíncrono, um volume pode ter duas cópias físicas, o que facilita a disponibilidade de dados e minimiza o tempo de inatividade. Cada relação de espelhamento assíncrono envolve um volume em uma função primária e um volume (em um storage array diferente) em uma função secundária.' 
+---
+= Espelhar volumes de forma assíncrona
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Com o recurso de espelhamento assíncrono, um volume pode ter duas cópias físicas, o que facilita a disponibilidade de dados e minimiza o tempo de inatividade. Cada relação de espelhamento assíncrono envolve um volume em uma função primária e um volume (em um storage array diferente) em uma função secundária.

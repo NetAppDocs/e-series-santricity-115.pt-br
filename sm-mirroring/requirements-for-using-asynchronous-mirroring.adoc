@@ -1,0 +1,77 @@
+---
+permalink: sm-mirroring/requirements-for-using-asynchronous-mirroring.html 
+sidebar: sidebar 
+keywords: requirements, use, asynchronous, mirroring 
+summary: Se você planeja usar o recurso de espelhamento assíncrono, tenha em mente os seguintes requisitos. 
+---
+= Requisitos para uso do espelhamento assíncrono
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se você planeja usar o recurso de espelhamento assíncrono, tenha em mente os seguintes requisitos.
+
+
+
+== Gerenciador unificado do SANtricity
+
+Para usar o espelhamento assíncrono, as seguintes condições devem ser configuradas:
+
+* O serviço Web Services Proxy está em execução.
+* O SANtricity Unified Manager está sendo executado em seu host local por meio de uma conexão HTTPS.
+* Cada controlador no array primário e no array secundário deve ter uma porta de gerenciamento Ethernet configurada e estar conetado à rede.
+* O Gerenciador Unificado do SANtricity mostra certificados SSL válidos para o storage array. Você pode aceitar um certificado autoassinado ou instalar seu próprio certificado de segurança usando o Unified Manager e navegando para o menu:certificado[Gerenciamento de certificados].
+* O Gerenciador de sistemas do SANtricity é iniciado a partir de um Gerenciador unificado.
+* Você deve ter descoberto os dois arrays de armazenamento entre os quais deseja espelhar dados. Em seguida, no Unified Manager, você seleciona o storage array do volume primário e clica em *Launch* para abrir o Gerenciador do sistema SANtricity baseado no navegador.
+
+
+
+
+== Storage arrays
+
+* Você precisa ter dois storage arrays.
+* Cada controlador no array primário e no array secundário deve ter uma porta de gerenciamento Ethernet configurada e estar conetado à rede.
+* Cada storage array deve ter duas controladoras.
+* Os storage arrays de volumes primário e secundário podem executar diferentes versões do sistema operacional. A versão mínima suportada é 7,84.
+* Você deve saber a senha para os storages de armazenamento local e remoto.
+* Você precisa ter capacidade livre suficiente no storage array remoto para criar um volume secundário igual ou maior que o volume principal que deseja espelhar.
+* Seus storage arrays locais e remotos precisam ser conectados por meio de uma malha Fibre Channel ou de uma interface iSCSI.
+
+
+
+
+== Configurações de hardware compatíveis e requisitos de conetividade
+
+* O espelhamento assíncrono é compatível somente nas configurações de hardware de controladora dupla.
+* A comunicação para o recurso de espelhamento assíncrono é compatível somente com controladoras com portas de host Fibre Channel (FC) ou iSCSI. O recurso usa uma das portas de host em cada controlador, tanto no storage array local quanto no storage array remoto.
+* Se os storage arrays estiverem conectados a conexões FC e iSCSI, um grupo de espelhamento assíncrono pode ser espelhado por FC e outro grupo de espelhamento assíncrono pode ser espelhado por iSCSI.
+
+
+
+
+== Candidatos a volume espelhado
+
+* O nível RAID, os parâmetros de armazenamento em cache e o tamanho do segmento podem ser diferentes nos volumes primário e secundário de um par espelhado assíncrono.
+* O volume secundário deve ser pelo menos tão grande quanto o volume primário.
+* Um volume pode participar de apenas um relacionamento de espelho.
+
+
+
+
+== Capacidade reservada
+
+* Um volume de capacidade reservada é necessário para um volume primário e para um volume secundário em um par espelhado para Registrar informações de gravação para recuperar de reinicializações do controlador e outras interrupções temporárias.
+* Como o volume principal e o volume secundário em um par espelhado exigem capacidade reservada adicional, você precisa garantir que tenha capacidade livre disponível em ambos os storage arrays na relação espelhada.
+
+
+
+
+== Recurso de segurança da unidade
+
+* Se você estiver usando unidades com capacidade de segurança, o volume primário e o volume secundário devem ter configurações de segurança compatíveis. Esta restrição não é imposta; portanto, você deve verificá-la por conta própria.
+* Se você estiver usando unidades com capacidade segura, o volume primário e o volume secundário deverão usar o mesmo tipo de unidade. Esta restrição não é imposta; portanto, você deve verificá-la por conta própria.
+* Se estiver a utilizar o Data Assurance (DA), o volume primário e o volume secundário têm de ter as mesmas definições DE DA.
+

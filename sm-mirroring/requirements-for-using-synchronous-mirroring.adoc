@@ -1,0 +1,74 @@
+---
+permalink: sm-mirroring/requirements-for-using-synchronous-mirroring.html 
+sidebar: sidebar 
+keywords: requirements, synchronous, mirroring 
+summary: Se você usar o recurso de espelhamento síncrono, tenha em mente os seguintes requisitos. 
+---
+= Requisitos para o uso do espelhamento síncrono
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se você usar o recurso de espelhamento síncrono, tenha em mente os seguintes requisitos.
+
+
+
+== Gerenciador unificado do SANtricity
+
+Como o recurso espelhamento síncrono exige o gerenciamento de vários storage arrays, você precisa ter o SANtricity Unified Manager instalado com base em navegador e descobrir os dois storage arrays entre os quais deseja espelhar os dados. Em seguida, no Unified Manager, você seleciona o storage array do volume principal e clica em Iniciar para abrir o Gerenciador de sistema do SANtricity baseado no navegador.
+
+
+
+== Storage arrays
+
+* Você precisa ter dois storage arrays.
+* Cada storage array deve ter duas controladoras.
+* Os storage arrays de volumes primário e secundário podem executar diferentes versões do sistema operacional. A versão mínima suportada é 7,84.
+* Você deve saber a senha para os storages de armazenamento local e remoto.
+* Você precisa ter capacidade livre suficiente no storage array remoto para criar um volume secundário igual ou maior que o volume principal que deseja espelhar.
+* Seus storage arrays locais e remotos precisam ser conectados por uma malha Fibre Channel.
+
+
+
+
+== Configuração e conexões de hardware suportadas
+
+* O espelhamento síncrono é compatível somente nas configurações de hardware de controladora dupla.
+* A comunicação para espelhamento síncrono é compatível apenas com controladoras com portas de host Fibre Channel (FC).
+* O espelhamento síncrono usa a porta de host com número mais alto em cada controlador, no storage array local e no storage array remoto. A porta de host 4 do adaptador de barramento do host do controlador (HBA) é normalmente reservada para transmissão de dados espelhados.
+
+
+
+
+== Candidatos a volume espelhado
+
+* O nível RAID, os parâmetros de armazenamento em cache e o tamanho do segmento podem ser diferentes nos volumes primário e secundário de um par espelhado síncrono.
+* Os volumes primário e secundário em um par espelhado síncrono devem ser volumes padrão. Não podem ser volumes finos ou volumes instantâneos.
+* O volume secundário deve ser pelo menos tão grande quanto o volume primário.
+* Somente o volume principal pode ter snapshots associados a ele e/ou ser o volume de origem ou destino em uma operação de cópia de volume.
+* Um volume pode participar de apenas um relacionamento de espelho.
+
+
+
+
+== Capacidade reservada
+
+* A capacidade reservada é necessária para um volume primário e para um volume secundário para registar informações de gravação para recuperar de reinicializações do controlador e outras interrupções temporárias.
+* Os volumes de capacidade reservada são criados automaticamente quando o espelhamento síncrono é ativado. Como o volume principal e o volume secundário em um par espelhado exigem capacidade reservada, você precisa garantir que tenha capacidade livre suficiente disponível em ambos os storage arrays que participam do relacionamento de espelhamento síncrono.
+
+
+
+
+== Recurso de segurança da unidade
+
+* Se você estiver usando unidades com capacidade de segurança, o volume primário e o volume secundário devem ter configurações de segurança compatíveis. Esta restrição não é imposta; portanto, você deve verificá-la por conta própria.
+* Se você estiver usando unidades com capacidade segura, o volume primário e o volume secundário deverão usar o mesmo tipo de unidade. Esta restrição não é imposta; portanto, você deve verificá-la por conta própria.
++
+** Se o volume principal utilizar unidades de encriptação total de disco (FDE), o volume secundário deverá utilizar unidades FDE.
+** Se o volume primário usar unidades validadas FIPS (Federal Information Processing Standards 140-2), o volume secundário deverá usar unidades validadas FIPS 140-2-2.
+
+
+* Se estiver a utilizar o Data Assurance (DA), o volume primário e o volume secundário têm de ter as mesmas definições DE DA.
+

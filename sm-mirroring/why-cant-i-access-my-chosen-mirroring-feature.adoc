@@ -1,0 +1,24 @@
+---
+permalink: sm-mirroring/why-cant-i-access-my-chosen-mirroring-feature.html 
+sidebar: sidebar 
+keywords: access, mirror, feature 
+summary: Para usar o recurso espelhamento assíncrono ou o recurso espelhamento síncrono, é necessário que o Gerenciador Unificado do SANtricity seja executado em seu host local por meio de uma conexão HTTPS para descobrir os storage arrays capazes de espelhamento e iniciar a operação de espelhamento. No Unified Manager, você deve selecionar o storage array do qual deseja espelhar dados e clicar em Iniciar para abrir o SANtricity System Manager. 
+---
+= Por que não consigo acessar meu recurso de espelhamento escolhido?
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para usar o recurso espelhamento assíncrono ou o recurso espelhamento síncrono, é necessário que o Gerenciador Unificado do SANtricity seja executado em seu host local por meio de uma conexão HTTPS para descobrir os storage arrays capazes de espelhamento e iniciar a operação de espelhamento. No Unified Manager, você deve selecionar o storage array do qual deseja espelhar dados e clicar em Iniciar para abrir o SANtricity System Manager.
+
+Para usar o recurso de espelhamento, verifique o seguinte:
+
+* O serviço Web Services Proxy está em execução.
+* O SANtricity Unified Manager está sendo executado em seu host local por meio de uma conexão HTTPS.
+* O Gerenciador Unificado do SANtricity mostra certificados SSL válidos para o storage array. Você pode aceitar um certificado autoassinado ou instalar seu próprio certificado de segurança usando o Unified Manager e navegando para o menu:certificado[Gerenciamento de certificados].
+* O Gerenciador de sistemas do SANtricity é iniciado a partir de um Gerenciador unificado.
+* Você deve ter descoberto os dois arrays de armazenamento entre os quais deseja espelhar dados. Em seguida, no Unified Manager, você seleciona o storage array do volume primário e clica em *Launch* para abrir o Gerenciador do sistema SANtricity baseado no navegador.
+

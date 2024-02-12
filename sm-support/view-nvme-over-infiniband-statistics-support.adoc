@@ -1,0 +1,35 @@
+---
+permalink: sm-support/view-nvme-over-infiniband-statistics-support.html 
+sidebar: sidebar 
+keywords: view, nvme, infiniband, statistics, packages 
+summary: É possível visualizar dados sobre as conexões NVMe over InfiniBand ao storage array. 
+---
+= Visualizar pacotes de estatísticas do NVMe over InfiniBand
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+É possível visualizar dados sobre as conexões NVMe over InfiniBand ao storage array.
+
+.Sobre esta tarefa
+O System Manager mostra esses tipos de estatísticas de NVMe em InfiniBand. Todas as estatísticas são apenas de leitura e não podem ser definidas.
+
+* *Estatísticas do controlador NVMe* -- fornece estatísticas para a controladora NVMe, incluindo tempos limite e falhas de conexão.
+* *Estatísticas da fila NVMe* -- fornece estatísticas para a fila NVMe, incluindo solicitações de conexão e status do comando.
+
+
+Você pode visualizar cada uma dessas estatísticas como estatísticas em bruto ou como estatísticas de linha de base. As estatísticas em bruto são todas as estatísticas que foram coletadas desde que os controladores foram iniciados. As estatísticas da linha de base são estatísticas pontuais que foram reunidas desde que você definiu o tempo da linha de base.
+
+Você pode acessar as estatísticas do NVMe over InfiniBand na página sistema (menu:Configurações[sistema]) ou na página suporte. Estas instruções descrevem como aceder às estatísticas a partir da página de suporte.
+
+.Passos
+. Selecione menu:guia Support [Support Center > Diagnostics] (suporte > Centro de suporte > Diagnóstico).
+. Selecione *View NVMe over InfiniBand Statistics Packages*.
+. Para definir a linha de base, clique em *Definir nova linha de base*.
++
+Definir a linha de base define um novo ponto de partida para a coleção das estatísticas. A mesma linha de base é usada para todas as estatísticas do NVMe.
+
+

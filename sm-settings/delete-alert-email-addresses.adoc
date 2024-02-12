@@ -1,0 +1,32 @@
+---
+permalink: sm-settings/delete-alert-email-addresses.html 
+sidebar: sidebar 
+keywords: delete, email, addresses, alerts 
+summary: Você pode excluir os endereços de e-mail dos destinatários que recebem alertas de e-mail. 
+---
+= Excluir endereços de e-mail para alertas
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode excluir os endereços de e-mail dos destinatários que recebem alertas de e-mail.
+
+.Passos
+. Selecione menu:Definições[Alertas].
+. Selecione a guia *Email*.
+. Na tabela *Endereço de e-mail*, selecione o endereço de e-mail que deseja excluir.
++
+O botão *Delete* no canto superior direito da tabela fica disponível para seleção.
+
+. Clique em *Excluir*.
++
+A caixa de diálogo *Confirm Delete Email* (confirmar exclusão de e-mail*)
+
+. Confirme a operação e, em seguida, clique em *Delete*.
+
+
+.Resultado
+Os alertas já não são enviados para este endereço de e-mail.

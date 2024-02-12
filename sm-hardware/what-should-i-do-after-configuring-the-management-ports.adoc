@@ -1,0 +1,24 @@
+---
+permalink: sm-hardware/what-should-i-do-after-configuring-the-management-ports.html 
+sidebar: sidebar 
+keywords: configure, management, ports 
+summary: Se você alterou o endereço IP do storage array, talvez queira atualizar a exibição global do array no Gerenciador Unificado do SANtricity. 
+---
+= O que devo fazer depois de configurar as portas de gerenciamento?
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se você alterou o endereço IP do storage array, talvez queira atualizar a exibição global do array no Gerenciador Unificado do SANtricity.
+
+Para atualizar a exibição de matriz global no Unified Manager, abra a interface e vá para menu:Gerenciar[Discover].
+
+Se você também estiver usando o SANtricity Storage Manager para gerenciamento global de arrays, vá para a janela de Gerenciamento Empresarial (EMW) e adicione novamente o storage à lista do EMW:
+
+. Localize a matriz na lista de matrizes de armazenamento do EMW.
+. Remova o array da lista.
+. Usando o novo endereço IP, adicione novamente a matriz de armazenamento à lista do EMW.
+

@@ -1,0 +1,53 @@
+---
+permalink: sm-interface/what-are-the-supported-browsers.html 
+sidebar: sidebar 
+keywords: supported, browsers 
+summary: O System Manager suporta essas versões do navegador. 
+---
+= Quais são os navegadores suportados?
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O System Manager suporta essas versões do navegador.
+
+|===
+| Navegador | Versão mínima 
+
+
+ a| 
+Google Chrome
+ a| 
+47
+
+
+
+ a| 
+Microsoft Internet Explorer
+ a| 
+11
+
+
+
+ a| 
+Microsoft Edge
+ a| 
+EdgeHTML 12
+
+
+
+ a| 
+Mozilla Firefox
+ a| 
+31
+
+
+
+ a| 
+Safari
+ a| 
+9
+
+|===

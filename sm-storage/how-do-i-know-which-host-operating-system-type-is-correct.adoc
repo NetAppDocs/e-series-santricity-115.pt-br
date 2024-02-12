@@ -1,0 +1,131 @@
+---
+permalink: sm-storage/how-do-i-know-which-host-operating-system-type-is-correct.html 
+sidebar: sidebar 
+keywords: host, operate, system type, correct 
+summary: 'O campo Host Operating System Type (tipo de sistema operativo anfitrião) contém o sistema operativo do anfitrião. Você pode selecionar o tipo de host recomendado na lista suspensa ou permitir que o Host Context Agent (HCA) configure o host e o tipo de sistema operacional apropriado do host.' 
+---
+= Como sei qual tipo de sistema operacional do host está correto?
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O campo Host Operating System Type (tipo de sistema operativo anfitrião) contém o sistema operativo do anfitrião. Você pode selecionar o tipo de host recomendado na lista suspensa ou permitir que o Host Context Agent (HCA) configure o host e o tipo de sistema operacional apropriado do host.
+
+[cols="2*"]
+|===
+| Tipo de sistema operacional do host | Sistema operacional (SO) e driver multipath 
+
+
+ a| 
+AIX MPIO
+ a| 
+O SO Advanced Interactive Executive (AIX) e o driver MPIO nativo
+
+
+
+ a| 
+AVT_4M
+ a| 
+Driver multipath proprietário da Silicon Graphics, Inc. (SGI); consulte a documentação de instalação do SGI para obter mais informações
+
+
+
+ a| 
+Predefinição de fábrica
+ a| 
+Isso é reservado para a inicialização inicial do storage array e deve ser alterado para corresponder ao sistema operacional host e ao driver multipath que está sendo usado para o host específico
+
+
+
+ a| 
+HP-UX
+ a| 
+O SO HP-UX com driver multipath nativo
+
+
+
+ a| 
+Linux (ATTO)
+ a| 
+O sistema operacional Linux e o driver ATTO Technology, Inc. (Deve usar HBAs FC ATTO)
+
+
+
+ a| 
+Linux (DM-MP)
+ a| 
+O sistema operacional Linux e o driver DM-MP nativo
+
+
+
+ a| 
+Linux (Pathmanager)
+ a| 
+O sistema operacional Linux e o driver multipath proprietário SGI; consulte a documentação de instalação do SGI para obter mais informações
+
+
+
+ a| 
+Mac os
+ a| 
+O Mac os e o driver ATTO Technology, Inc.
+
+
+
+ a| 
+ONTAP
+ a| 
+FlexArray
+
+
+
+ a| 
+Solaris (versão 11 ou posterior)
+ a| 
+O SO Solaris 11 ou posterior e o driver MPxIO nativo
+
+
+
+ a| 
+Solaris (versão 10 ou anterior)
+ a| 
+O Solaris 10 ou SO anterior e o driver MPxIO nativo
+
+
+
+ a| 
+SVC
+ a| 
+IBM SAN volume Controller
+
+
+
+ a| 
+VMware
+ a| 
+O SO ESXi
+
+
+
+ a| 
+Windows ou Windows em cluster
+ a| 
+O sistema operativo Windows Server e o Windows MPIO com um controlador DSM
+
+
+
+ a| 
+Windows (ATTO)
+ a| 
+O sistema operacional Windows e o driver ATTO Technology, Inc.
+
+|===
+Depois que o HCA é instalado e o storage é conetado ao host, o HCA envia a topologia do host para os controladores de storage pelo caminho de e/S. Com base na topologia do host, os controladores de storage definem automaticamente o host e as portas de host associadas e, em seguida, definem o tipo de host.
+
+[NOTE]
+====
+Se o HCA não selecionar o tipo de host recomendado, você deve definir manualmente o tipo de host no System Manager.
+
+====

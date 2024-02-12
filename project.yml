@@ -1,0 +1,32 @@
+---
+settings:
+  name: SANtricity 11.5
+  downlevel: true
+  internal:
+    pdf_enabled: true
+  prod:
+    pdf_enabled: true
+    harmony_enabled: false
+  versions:
+  - version-number: '11.5'
+    url: "/e-series-santricity-115"
+  - version-number: '11.7'
+    url: "/e-series-santricity-117"
+  - version-number: '11.6'
+    url: "/e-series-santricity-116"
+  langs: pt-br,us-en,ja-jp,ko-kr,zh-cn,zh-tw,de-de,es-es,fr-fr,it-it
+sidebar:
+  entries:
+  - title: Documentos do SANtricity 11,5
+    url: "/index.html"
+  - section: sm-interface
+  - section: sm-storage
+  - section: sm-mirroring
+  - section: sm-hardware
+  - section: sm-settings
+  - section: sm-support
+  - title: Avisos legais
+    url: "/legal-notices.html"
+product-family:
+  name: E-Series
+  repo: e-series-family

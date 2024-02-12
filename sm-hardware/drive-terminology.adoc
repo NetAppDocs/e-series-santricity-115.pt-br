@@ -1,0 +1,102 @@
+---
+permalink: sm-hardware/drive-terminology.html 
+sidebar: sidebar 
+keywords: drive, terminology 
+summary: Saiba como os termos da unidade se aplicam ao storage array. 
+---
+= Terminologia da unidade
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Saiba como os termos da unidade se aplicam ao storage array.
+
+|===
+| Componente | Descrição 
+
+
+ a| 
+DA
+ a| 
+O Data Assurance (DA) é um recurso que verifica e corrige erros que podem ocorrer à medida que os dados são comunicados entre um host e um storage array. O Data Assurance pode ser ativado no nível de pool ou grupo de volumes, com hosts que usam uma interface de e/S compatível com DA, como Fibre Channel.
+
+
+
+ a| 
+Recurso de segurança da unidade
+ a| 
+O Drive Security é um recurso de storage array que fornece uma camada extra de segurança com unidades de criptografia completa de disco (FDE) ou unidades FIPS (Federal Information Processing Standard). Quando essas unidades são usadas com o recurso Segurança da Unidade, elas precisam de uma chave de segurança para acessar seus dados. Quando as unidades são fisicamente removidas do array, elas não podem operar até serem instaladas em outro array, em que ponto, elas estarão em um estado de segurança bloqueado até que a chave de segurança correta seja fornecida.
+
+
+
+ a| 
+Compartimento de unidades
+ a| 
+Um compartimento de unidade, também chamado de compartimento de expansão, contém um conjunto de unidades e dois módulos de entrada/saída (IOMs). As IOMs contêm portas SAS que conectam um compartimento de unidade a uma gaveta de controladora ou a outras gavetas de unidades.
+
+
+
+ a| 
+Unidades FDE
+ a| 
+As unidades Full Disk Encryption (FDE) executam a encriptação na unidade de disco no nível do hardware. O disco rígido contém um chip ASIC que criptografa dados durante gravações e, em seguida, descriptografa dados durante leituras.
+
+
+
+ a| 
+Unidades FIPS
+ a| 
+As unidades FIPS usam Federal Information Processing Standards (FIPS) 140-2 nível 2. Eles são essencialmente unidades FDE que aderem aos padrões do governo dos Estados Unidos para garantir algoritmos e métodos de criptografia fortes. As unidades FIPS têm padrões de segurança mais altos do que as unidades FDE.
+
+
+
+ a| 
+HDD
+ a| 
+Unidades de disco rígido (HDDs) são dispositivos de armazenamento de dados que usam plataformas metálicas rotativas com um revestimento magnético.
+
+
+
+ a| 
+Unidades hot spare
+ a| 
+As peças sobressalentes ativas funcionam como unidades de reserva nos grupos de volumes RAID 1, RAID 5 ou RAID 6. São unidades totalmente funcionais que não contêm dados. Se uma unidade falhar no grupo de volumes, o controlador reconstrói automaticamente os dados da unidade com falha para um hot spare.
+
+
+
+ a| 
+Unidades com capacidade de segurança
+ a| 
+As unidades com capacidade segura podem ser unidades com criptografia total de disco (FDE) ou unidades FIPS (Federal Information Processing Standard), que criptografam dados durante gravações e descriptografam dados durante leituras. Essas unidades são consideradas seguras-_Capable_ porque podem ser usadas para segurança adicional usando o recurso Segurança da Unidade. Se o recurso Segurança da unidade estiver habilitado para grupos de volume e pools usados com essas unidades, as unidades se tornarão seguras-_enabled_.
+
+
+
+ a| 
+Unidades habilitadas para segurança
+ a| 
+As unidades habilitadas para segurança são usadas com o recurso Segurança da unidade. Quando você ativa o recurso de Segurança da Unidade e, em seguida, aplica o Drive Security a um pool ou grupo de volume em unidades seguras-_capazes_, as unidades ficam seguras___ ativadas. O acesso de leitura e gravação está disponível somente por meio de um controlador configurado com a chave de segurança correta. Essa segurança adicional impede o acesso não autorizado aos dados em uma unidade que é fisicamente removida do storage array.
+
+
+
+ a| 
+SAS
+ a| 
+O Serial Attached SCSI (SAS) é um protocolo serial ponto a ponto que vincula controladores diretamente às unidades de disco.
+
+
+
+ a| 
+SATA
+ a| 
+As unidades Serial Advanced Technology Attachment (SATA) utilizam um padrão baseado na tecnologia de sinalização serial. O link serial usa um único cabo com no mínimo quatro fios para criar uma conexão ponto a ponto entre dispositivos. O SATA é uma tecnologia de transferência de dados mais compacta, confiável e mais rápida do que as tecnologias paralelas mais antigas.
+
+
+
+ a| 
+SSD
+ a| 
+Os discos de estado sólido (SSDs) são dispositivos de armazenamento de dados que usam memória de estado sólido (flash) para armazenar dados persistentemente. Os SSDs emulam discos rígidos convencionais e estão disponíveis com as mesmas interfaces que os discos rígidos usam.
+
+|===

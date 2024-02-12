@@ -1,0 +1,81 @@
+---
+permalink: sm-settings/certificate-terminology.html 
+sidebar: sidebar 
+keywords: certificate, terminology 
+summary: Saiba como os termos do certificado se aplicam ao storage array. 
+---
+= Terminologia do certificado
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Saiba como os termos do certificado se aplicam ao storage array.
+
+|===
+| Prazo | Descrição 
+
+
+ a| 
+CA
+ a| 
+Uma autoridade de certificação (CA) é uma entidade confiável que emite documentos eletrônicos, chamados certificados digitais, para segurança na Internet. Esses certificados identificam proprietários de sites, o que permite conexões seguras entre clientes e servidores.
+
+
+
+ a| 
+CSR
+ a| 
+Uma solicitação de assinatura de certificado (CSR) é uma mensagem enviada de um requerente para uma autoridade de certificação (CA). O CSR valida as informações que a CA precisa para emitir um certificado.
+
+
+
+ a| 
+Certificado
+ a| 
+Um certificado identifica o proprietário de um site para fins de segurança, o que impede que atacantes personificem o site. O certificado contém informações sobre o proprietário do site e a identidade da entidade confiável que certifica (assina) essas informações.
+
+
+
+ a| 
+Certificado de cliente
+ a| 
+Para o gerenciamento de chaves de segurança, um certificado de cliente valida os controladores da matriz de armazenamento, para que o servidor de gerenciamento de chaves possa confiar em seus endereços IP.
+
+
+
+ a| 
+Certificado do servidor de gerenciamento de chaves
+ a| 
+Para o gerenciamento de chaves de segurança, um certificado do servidor de gerenciamento de chaves valida o servidor, para que o storage array possa confiar em seu endereço IP.
+
+
+
+ a| 
+Certificado de gestão
+ a| 
+Um certificado de gerenciamento é aprovado por uma autoridade de certificação (CA) e permite acesso seguro ao aplicativo da Web. Também referido como um "certificado assinado".
+
+
+
+ a| 
+Servidor OCSP
+ a| 
+O servidor OCSP (Online Certificate Status Protocol) determina se a autoridade de certificação (CA) revogou quaisquer certificados antes da data de expiração agendada e, em seguida, bloqueia o usuário de acessar um servidor se o certificado for revogado.
+
+
+
+ a| 
+Certificado auto-assinado
+ a| 
+Um certificado autoassinado é pré-carregado no controlador. Se a conexão com o site for autoassinada, uma mensagem de aviso será aberta antes de prosseguir para o aplicativo da Web.
+
+
+
+ a| 
+Certificado confiável
+ a| 
+Um certificado confiável de uma autoridade de certificação (CA) é um certificado conhecido na parte superior da hierarquia de certificados. Também referido como um "certificado raiz".
+
+|===

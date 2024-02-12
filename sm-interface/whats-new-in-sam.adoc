@@ -1,0 +1,70 @@
+---
+permalink: sm-interface/whats-new-in-sam.html 
+sidebar: sidebar 
+keywords: new, santricity, system manager 
+summary: O System Manager inclui os seguintes novos recursos. 
+---
+= Novidades no SANtricity System Manager
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O System Manager inclui os seguintes novos recursos.
+
+
+
+== Novos recursos na versão 11,53
+
+Esta versão inclui apenas pequenas melhorias e correções.
+
+
+
+== Novos recursos na versão 11,52
+
+|===
+| Novo recurso | Descrição 
+
+
+ a| 
+NVMe em interface de host FC
+ a| 
+Agora, é possível solicitar uma conexão de host NVMe over Fibre Channel para modelos de controladora EF570U ou E5700U, além do suporte existente para NVMe em RoCE e NVMe over InfiniBand. O System Manager inclui estatísticas para esse novo tipo de conexão no menu:Configurações[sistema] em "detalhes NVMe sobre Fibre Channel".
+
+|===
+
+
+== Novos recursos na versão 11,51
+
+Esta versão inclui apenas pequenas melhorias e correções.
+
+
+
+== Novos recursos na versão 11,50
+
+|===
+| Novo recurso | Descrição 
+
+
+ a| 
+NVMe em interface RoCE
+ a| 
+Agora, é possível solicitar uma conexão de host NVMe sobre RoCE para EF570 ou E5700 controladoras da série DE. O System Manager inclui novas funções para configurar a conexão de rede com o host (disponível na página hardware ou no menu:Configurações[sistema] e funções para visualizar dados sobre as conexões NVMe sobre RoCE para o storage array (disponível no menu:suporte[Centro de suporte] ou no menu:Configurações[sistema].
+
+
+
+ a| 
+Seleção manual de condução para grupos de volume
+ a| 
+Além da conveniente seleção automática, uma nova opção está disponível para selecionar unidades individuais quando você cria um grupo de volumes. Em geral, recomenda-se a seleção automática de tração, mas a opção individual de seleção de tração está disponível para ambientes com requisitos especiais de localização de condução.
+
+
+
+ a| 
+Gerenciador unificado do SANtricity
+ a| 
+O Unified Manager é uma aplicação baseada em navegador instalada separadamente que detecta e gerencia controladores da série E2800 e controladores da série E5700. Embora esse novo aplicativo não seja um novo recurso do System Manager, ele fornece uma nova estrutura empresarial baseada em navegador, a partir da qual o System Manager pode ser iniciado para arrays de storage descobertos. O novo Unified Manager pode ser baixado da área de downloads do software de suporte.
+
+|===

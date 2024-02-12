@@ -1,0 +1,57 @@
+---
+permalink: sm-settings/view-imported-certificates.html 
+sidebar: sidebar 
+keywords: view, imported, certificate, information 
+summary: Na página certificados, você pode exibir o tipo de certificado, a autoridade emissora e o intervalo de datas válido dos certificados importados anteriormente. 
+---
+= Exibir informações de certificado importadas
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Na página certificados, você pode exibir o tipo de certificado, a autoridade emissora e o intervalo de datas válido dos certificados importados anteriormente.
+
+.Antes de começar
+* Você deve estar conetado com um perfil de usuário que inclua permissões de administrador de segurança. Caso contrário, as funções do certificado não aparecem.
+
+
+.Sobre esta tarefa
+Esta tarefa descreve como exibir informações para certificados instalados pelo usuário ou pré-instalados.
+
+.Passos
+. Selecione menu:Definições[certificados].
+. Selecione uma das guias para exibir informações sobre certificados de gerenciamento para os controladores, certificados confiáveis e certificados para um servidor de gerenciamento de chaves.
++
+[cols="25h,~"]
+|===
+| Separador | Descrição 
+
+
+ a| 
+Gerenciamento de array
+ a| 
+Exibir informações sobre todos os certificados de servidor importados para os controladores.
+
+
+
+ a| 
+Confiável
+ a| 
+Exibir informações sobre todos os certificados confiáveis (raiz) importados para os controladores. Use o campo de filtro em *Mostrar certificados que são...* para exibir certificados instalados pelo usuário ou pré-instalados.
+
+** *Instalado pelo usuário*. Certificados que um usuário carregou para a matriz de armazenamento (inclui certificados confiáveis, certificados LDAPS e certificados de Federação de identidade).
+** *Pré-instalado*. Certificados incluídos com a matriz de armazenamento.
+
+
+
+
+ a| 
+Gerenciamento de chaves
+ a| 
+Exibir informações sobre todos os certificados de gerenciamento (assinados) importados para um servidor de gerenciamento de chaves externo.
+
+|===
+
